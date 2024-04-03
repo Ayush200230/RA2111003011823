@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProductPreview from "../../components/productPreview";
@@ -12,7 +13,7 @@ const ProductPage: React.FC<{ productId: string }> = ({ productId }) => {
       try {
         setLoading(true);
         const response = await axios.get(
-          `http://localhost:3000/categories/Laptop/products/${productId}`
+          `http://localhost:5173/categories/Laptop/products/${productId}`
         );
         setProduct(response.data);
         setLoading(false);
