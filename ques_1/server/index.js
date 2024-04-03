@@ -1,10 +1,11 @@
-// index.js
-
 const express = require('express');
+const cors = require('cors');
 const axios = require('axios');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+app.use(cors());
+app.use(express.json());
+const PORT = 3000;
 
 // Mock token for demonstration purposes
 const ACCESS_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzEyMTU1ODIxLCJpYXQiOjE3MTIxNTU1MjEsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6ImY4NWZjM2MyLTY1MTMtNDI5MC05NzlmLTc4ZDBkZjg3OTgwYyIsInN1YiI6ImFnMzg3MkBzcm1pc3QuZWR1LmluIn0sImNvbXBhbnlOYW1lIjoiZ29NYXJ0IiwiY2xpZW50SUQiOiJmODVmYzNjMi02NTEzLTQyOTAtOTc5Zi03OGQwZGY4Nzk4MGMiLCJjbGllbnRTZWNyZXQiOiJ4eVlYTElqQ1V3REVTckJ3Iiwib3duZXJOYW1lIjoiQXl1c2ggR2FyZyIsIm93bmVyRW1haWwiOiJhZzM4NzJAc3JtaXN0LmVkdS5pbiIsInJvbGxObyI6IlJBMjExMTAwMzAxMTgyMyJ9._OXEfvoTE_OepHgUVIQmPRiopHTL3woho4UiDZtbfQI';
